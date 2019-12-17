@@ -19,7 +19,7 @@ def myTradingSystem(DATE, OPEN, HIGH, LOW, CLOSE, VOL, exposure, equity, setting
     shortEquity = ~longEquity
 
     pos = numpy.zeros(nMarkets)
-    pos[longEquity] = 1
+    pos[longEquity] = 10
     pos[shortEquity] = -1
 
     weights = pos/numpy.nansum(abs(pos))
